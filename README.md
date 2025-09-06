@@ -36,10 +36,9 @@ Our mission is to make **advanced AI accessible, secure, and meaningful**—empo
 
 ## 📖 Getting Started
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/eChai.git
-````
-
+```
+   git clone https://github.com/eIbrahim67/eChai.git
+```
 2. Open the project in **Android Studio**.
 3. Add your API keys in `local.properties`.
 4. Build and run on an emulator or physical device.
@@ -58,5 +57,3 @@ We welcome contributions! 🚀
 ## 📄 License
 
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
-```
