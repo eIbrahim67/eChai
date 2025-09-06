@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal"
+    android:background="@drawable/click_item_10"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical">
+
+    <!-- Profile Name -->
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_profile"
+        app:tint="@color/primary_white"/>
+
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/SettingsButton"
+        android:layout_marginStart="10dp"
+        android:text="Profile Name"/>
+
+</LinearLayout>

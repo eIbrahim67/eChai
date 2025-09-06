@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_chatbot">
+
+    <fragment
+        android:id="@+id/nav_chatbot"
+        android:name="com.eibrahim.chatbot.chatbot.presentation.view.ChatbotFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_chatbot" />
+
+    <fragment
+        android:id="@+id/nav_llm_models"
+        android:name="com.eibrahim.chatbot.LLMModel.LLMModelFragment"
+        android:label="LLM Model"
+        tools:layout="@layout/fragment_l_l_m_model" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.eibrahim.chatbot.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_instructions"
+        android:name="com.eibrahim.chatbot.instructions.InstructionsFragment"
+        android:label="Instructions"
+        tools:layout="@layout/fragment_instructions" />
+
+    <fragment
+        android:id="@+id/nav_personalization"
+        android:name="com.eibrahim.chatbot.personalization.PersonalizationFragment"
+        android:label="Personalization"
+        tools:layout="@layout/fragment_personalization" />
+
+    <fragment
+        android:id="@+id/nav_security"
+        android:name="com.eibrahim.chatbot.security.SecurityFragment"
+        android:label="Security"
+        tools:layout="@layout/fragment_security" />
+
+    <fragment
+        android:id="@+id/nav_upgrade"
+        android:name="com.eibrahim.chatbot.upgrade.UpgradeFragment"
+        android:label="Upgrade"
+        tools:layout="@layout/fragment_upgrade" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.eibrahim.chatbot.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+
+    <!-- The MainActivity should be set as the host for the fragments -->
+</navigation>

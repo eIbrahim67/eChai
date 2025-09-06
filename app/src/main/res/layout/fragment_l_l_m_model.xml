@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/choose_model_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".LLMModel.LLMModelFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:backgroundTint="@color/primary_color"
+            android:id="@+id/llmModelBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:focusable="true"
+            android:padding="8dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:background="@drawable/click_item_circle"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Model Image"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary_white" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/choose_model_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Select AI Model"
+            android:textColor="@color/primary_white"
+            android:textSize="22sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/llmModelBack"
+            app:layout_constraintStart_toEndOf="@id/llmModelBack"
+            app:layout_constraintTop_toTopOf="@id/llmModelBack" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/choose_model_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/roboto_mono_variable"
+            android:gravity="center_horizontal"
+            android:text="Choose your preferred\nLarge Language Model to start chatting"
+            android:textColor="@color/primary_white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_model_title" />
+
+        <!-- RecyclerView for Models -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/modelsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/item_llm_model"
+            tools:itemCount="5"
+            android:clipToPadding="false"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_model_subtitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

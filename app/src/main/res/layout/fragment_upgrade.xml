@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".upgrade.UpgradeFragment">
+
+    <!-- Time, Status bar can be left for the system UI -->
+
+    <!-- Back Icon -->
+    <ImageView
+        android:id="@+id/upgradeBack"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/click_item_10"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/primary_white" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="eChai Plus"
+        android:textColor="@android:color/white"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upgradeBack"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Access our most powerful model and advanced features"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- Feature List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feature_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/restore_subscription"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Features Section -->
+    <!-- Feature 1 -->
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/primary_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feature1"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_white"
+        android:layout_height="wrap_content"
+        android:text="Everything in Free"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icon1"
+        app:layout_constraintTop_toTopOf="@id/icon1"
+        app:layout_constraintBottom_toBottomOf="@id/icon1"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- Feature 2 -->
+    <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/primary_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/icon1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feature2"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_white"
+        android:layout_height="wrap_content"
+        android:text="Extended limits on messaging, file uploads, advanced data analysis, and image generation"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icon2"
+        app:layout_constraintTop_toTopOf="@id/icon2"
+        app:layout_constraintBottom_toBottomOf="@id/icon2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Add more features similarly -->
+    <!-- Example: icon3 and feature3 -->
+    <ImageView
+        android:id="@+id/icon3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/primary_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/icon2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feature3"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_white"
+        android:layout_height="wrap_content"
+        android:text="Standard and advanced voice mode with video and screen sharing"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icon3"
+        app:layout_constraintTop_toTopOf="@id/icon3"
+        app:layout_constraintBottom_toBottomOf="@id/icon3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon4"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/primary_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/icon3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feature4"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_white"
+        android:layout_height="wrap_content"
+        android:text="Access to the multiple reasoning models (including OpenAl 03 series, 04-mini, and a research preview of GPT-4.5)"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icon4"
+        app:layout_constraintTop_toTopOf="@id/icon4"
+        app:layout_constraintBottom_toBottomOf="@id/icon4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon5"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/primary_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/icon4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feature5"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_white"
+        android:layout_height="wrap_content"
+        android:text="Create and use tasks, projects, and custom GPTs."
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icon5"
+        app:layout_constraintTop_toTopOf="@id/icon5"
+        app:layout_constraintBottom_toBottomOf="@id/icon5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon6"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/primary_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/icon5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feature6"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_white"
+        android:layout_height="wrap_content"
+        android:text="Limited access to Sora video generation"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icon6"
+        app:layout_constraintTop_toTopOf="@id/icon6"
+        app:layout_constraintBottom_toBottomOf="@id/icon6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon7"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/primary_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/icon6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feature7"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_white"
+        android:layout_height="wrap_content"
+        android:text="Opportunities to test new features"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icon7"
+        app:layout_constraintTop_toTopOf="@id/icon7"
+        app:layout_constraintBottom_toBottomOf="@id/icon7"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Restore Subscription -->
+    <TextView
+        android:id="@+id/restore_subscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restore subscription"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/upgrade_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upgrade_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/primary_gray"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:text="Upgrade to Plus"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cornerRadius="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/price_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/primary_white"
+        app:strokeWidth="1dp" />
+
+    <!-- Price Note -->
+    <TextView
+        android:id="@+id/price_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto-renews for EGP 699.99/month until canceled"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

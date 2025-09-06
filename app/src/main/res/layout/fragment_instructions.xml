@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:background="@color/primary_color"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".instructions.InstructionsFragment">
+
+    <ImageView
+        android:id="@+id/instructionsBack"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/click_item_10"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/primary_white" />
+
+    <!-- Settings Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Custom Instructions"
+        android:textColor="@color/primary_white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/instructionsBack"
+        app:layout_constraintStart_toEndOf="@id/instructionsBack"
+        app:layout_constraintTop_toTopOf="@id/instructionsBack" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="what should eChai call you?"
+        android:textColor="@color/primary_white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/instructionsBack"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inst_name_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:minHeight="50dp"
+        android:textSize="18sp"
+        android:textColorHint="@color/primary_white"
+        app:boxBackgroundColor="@color/primary_gray"
+        app:boxStrokeColor="@color/primary_white"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:hintTextColor="@color/primary_white"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inst_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@color/primary_white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="What do you do?"
+        android:textColor="@color/primary_white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/inst_name_card"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inst_work_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:minHeight="50dp"
+        android:textSize="18sp"
+        android:textColorHint="@color/primary_white"
+        app:boxBackgroundColor="@color/primary_gray"
+        app:boxStrokeColor="@color/primary_white"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/primary_white"
+        android:hint="Engineer, student, etc."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inst_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@color/primary_white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="For what you use eChai?"
+        android:textColor="@color/primary_white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/inst_work_card"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inst_usage_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:minHeight="50dp"
+        android:textSize="18sp"
+        android:textColorHint="@color/primary_white"
+        app:boxBackgroundColor="@color/primary_gray"
+        app:boxStrokeColor="@color/primary_white"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:hintTextColor="@color/primary_white"
+        app:boxStrokeWidth="1dp"
+        android:hint="Study, Programming, etc."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inst_usage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@color/primary_white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/inst_clear_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/primary_gray"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:text="Clear"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inst_usage_card"
+        app:strokeColor="@color/primary_white"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/inst_save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/primary_gray"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:text="Update"
+        android:clickable="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inst_clear_btn"
+        app:strokeColor="@color/primary_white"
+        app:strokeWidth="1dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Icon -->
+        <ImageView
+            android:id="@+id/settingsBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/click_item_10"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Back"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary_white" />
+
+        <!-- Settings Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Settings"
+            android:textColor="@color/primary_white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/settingsBack"
+            app:layout_constraintStart_toEndOf="@id/settingsBack"
+            app:layout_constraintTop_toTopOf="@id/settingsBack" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsBack"
+            tools:itemCount="5"
+            tools:listitem="@layout/setting_item" />
+
+        <!-- Sign Out -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/signOutBtn"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/click_item_10"
+            app:layout_constraintTop_toBottomOf="@id/rvSettings">
+
+            <ImageView
+                android:id="@+id/signOutIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_sign_out"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/red" />
+
+            <TextView
+                style="@style/SettingsButton"
+                android:layout_width="0dp"
+                android:layout_marginStart="12dp"
+                android:text="Sign Out"
+                android:textColor="@color/red"
+                app:layout_constraintBottom_toBottomOf="@id/signOutIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/signOutIcon"
+                app:layout_constraintTop_toTopOf="@id/signOutIcon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

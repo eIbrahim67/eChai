@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_login">
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.eibrahim.chatbot.auth.login.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_signup"
+        android:name="com.eibrahim.chatbot.auth.SignupFragment"
+        android:label="Signup"
+        tools:layout="@layout/fragment_signup" />
+
+    <fragment
+        android:id="@+id/nav_forget_password"
+        android:name="com.eibrahim.chatbot.ForgetPassword.ForgetPasswordFragment"
+        android:label="Forget Password"
+        tools:layout="@layout/fragment_forget_password" />
+
+    <fragment
+        android:id="@+id/nav_reset_password"
+        android:name="com.eibrahim.chatbot.ResetPassword.ResetPasswordFragment"
+        android:label="Reset Password"
+        tools:layout="@layout/fragment_reset_password" />
+
+    <fragment
+        android:id="@+id/nav_otp"
+        android:name="com.eibrahim.chatbot.OTP.OTPFragment"
+        android:label="OTP"
+        tools:layout="@layout/fragment_otp" />
+
+    <fragment
+        android:id="@+id/nav_verify"
+        android:name="com.eibrahim.chatbot.verify.VerifyFragment"
+        android:label="Verify"
+        tools:layout="@layout/fragment_verify" />
+
+</navigation>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".verify.VerifyFragment"
+    android:background="@color/primary_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:id="@+id/textViewp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_mono_variable"
+                android:gravity="center"
+                android:text="Please verify \nYour Email"
+                android:textColor="@color/primary_white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textVerifyPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Enter the OTP code we just sent\nyou on your registered Email"
+                android:textColor="@color/gray_v5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewp" />
+
+            <TextView
+                android:id="@+id/textViewe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/roboto_mono_variable"
+                android:text="Enter Code"
+                android:textColor="@color/primary_white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textVerifyPhone" />
+
+            <LinearLayout
+                android:id="@+id/verify_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewe">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="@color/primary_white"
+                    app:strokeWidth="2dp">
+
+                    <EditText
+                        android:id="@+id/verify_digit_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@color/primary_gray"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:textSize="24sp" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="@color/primary_white"
+                    app:strokeWidth="2dp">
+
+                    <EditText
+                        android:id="@+id/verify_digit_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@color/primary_gray"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="@color/primary_white"
+                    app:strokeWidth="2dp">
+
+                    <EditText
+                        android:id="@+id/verify_digit_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@color/primary_gray"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="@color/primary_white"
+                    app:strokeWidth="2dp">
+
+                    <EditText
+                        android:id="@+id/verify_digit_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@color/primary_gray"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="@color/primary_white"
+                    app:strokeWidth="2dp">
+
+                    <EditText
+                        android:id="@+id/verify_digit_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@color/primary_gray"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="@color/primary_white"
+                    app:strokeWidth="2dp">
+
+                    <EditText
+                        android:id="@+id/verify_digit_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:background="@color/primary_gray"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:gravity="center"
+                        android:hint="-"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerify"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/primary_gray"
+                    android:insetLeft="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/verify_container"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    app:cardElevation="8dp"
+                    app:strokeColor="@color/primary_white"
+                    app:strokeWidth="1dp"
+                    android:insetBottom="0dp"
+                    android:text="Create An Account"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:cornerRadius="10dp" />
+
+            <TextView
+                android:id="@+id/tv_resend_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Resend OTP"
+                android:textColor="@color/primary_white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/btnVerify"
+                app:layout_constraintStart_toStartOf="@+id/btnVerify"
+                app:layout_constraintTop_toBottomOf="@+id/btnVerify" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
